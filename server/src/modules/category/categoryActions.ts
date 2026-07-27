@@ -25,7 +25,7 @@ const browse: RequestHandler = (req, res) => {
 
 const read: RequestHandler = (req, res) => {
   const parsedId = Number.parseInt(req.params.id);
-  const category = categories.find((p) => p.id === parsedId);
+  const category = categories.find((c) => c.id === parsedId);
 
   if (category != null) {
     res.json(category);
